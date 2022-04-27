@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FCFF"
+    tools:context=".entry">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="NIT Trichy Restaurant App"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Entry"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/orderno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:hint="Order no"
+        android:textColorHint="#E8630A" />
+
+    <EditText
+        android:id="@+id/tableno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderno"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:hint="Table no"
+        android:inputType="number"
+        android:textColorHint="#E8630A" />
+
+    <EditText
+        android:id="@+id/dish1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tableno"
+        android:textColor="#000000"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:hint="dish1"
+        android:inputType="text"
+        android:textColorHint="#E8630A" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dish1"
+        android:layout_margin="10dp"
+        android:hint="dish2"
+        android:textColor="#000000"
+        android:textColorHint="#E8630A"
+        android:gravity="center"
+        android:inputType="text"
+        android:id="@+id/dish2"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dish2"
+        android:layout_margin="10dp"
+        android:hint="dish3"
+        android:textColor="#000000"
+        android:textColorHint="#E8630A"
+        android:gravity="center"
+        android:inputType="text"
+        android:id="@+id/dish3"
+        />
+
+    <EditText
+        android:id="@+id/dish4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dish3"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:hint="dish4"
+        android:inputType="text"
+        android:textColorHint="#E8630A" />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dish4"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#000000"
+        android:text="Enter"
+        android:textColor="#FFFDFC" />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#000000"
+        android:text="View"
+        android:id="@+id/view"
+        android:layout_below="@id/enter"
+        android:textColor="#FFFEFD"
+        />
+
+
+
+</RelativeLayout>
