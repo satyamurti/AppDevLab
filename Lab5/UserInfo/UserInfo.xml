@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Student>
+<PersonDetails>  
+      <id>106119148</id>
+      <name>Aryan</name>
+     <city>Pune</city>
+   <Branch>CSE</Branch>
+   <Year>III</Year>
+</PersonDetails> 	
+<PersonDetails>
+	<id>107119100</id>
+   <name>Shyam</name>
+   <city>Chennai</city>
+   <Branch>EEE</Branch>
+   <Year>III</Year>
+</PersonDetails> 
+<PersonDetails>
+   <id>108119120</id>
+   <name>Laxmi</name>
+   <city>Delhi</city>
+   <Branch>ECE</Branch>
+   <Year>III</Year>
+</PersonDetails> 
+<PersonDetails>
+   <id>111119140</id>
+   <name>Abishek</name>
+   <city>Mumbai</city>
+   <Branch>Mech</Branch>
+   <Year>III</Year>
+</PersonDetails> 
+</Student>

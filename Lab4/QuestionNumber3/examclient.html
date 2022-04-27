@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Online Examination</title>
+    <script language="javascript">
+      function validation(Form_obj) {
+        if (Form_obj.Seat_no.value.length == 0) {
+          alert("Please,fill up the Seat Number");
+          Form_obj.Seat_no.focus();
+          return false;
+        }
+//        if (Form_obj.Name.value.length == 0) {
+//          alert("Please,fill up the Name");
+//          Form_obj.Name.focus();
+//          return false;
+//        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h1>Online Examination</h1>
+    </center>
+    <form
+      action="ExamServer.jsp"
+      method="POST"
+      name="entry"
+      onSubmit="return validation(this)"
+    >
+      <input type="hidden" value="list" name="action" />
+      <table>
+        <tr>
+          <td><h3>Seat Number:</h3></td>
+          <td><input type="text" name="Seat_no" /></td>
+        </tr>
+        
+        <hr />
+        <tr>
+          <td><b>Total Marks:25(Each question carries equal marks) </b></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><b>Time: 15 Min.</b></td>
+        </tr>
+      </table>
+      <hr />
+      <b>1. The software used to write programs is known as a text editor.</b><br />
+      <input type="radio" name="group1" value="True" />True
+      <input type="radio" name="group1" value="False" />False<br />
+      <br />
+
+      <b>2. Bill Gates is founder of Microsoft.</b><br />
+      <input type="radio" name="group2" value="True" />True
+      <input type="radio" name="group2" value="False" />False<br />
+      <br />
+
+      <b>3. Writing code is the first step in the waterfall model of developing software.</b><br />
+      <input type="radio" name="group3" value="True" />True
+      <input type="radio" name="group3" value="False" />False<br />
+      <br />
+      <b>4. The C programming language is considered a structured programming language</b><br />
+      <input type="radio" name="group4" value="True" />True
+      <input type="radio" name="group4" value="False" />False<br />
+      <br />
+      <b>5. Full form of HTTP is Hyper Text Transfer Protocol</b><br />
+      <input type="radio" name="group5" value="True" />True
+      <input type="radio" name="group5" value="False" />False<br />
+      <hr />
+
+      <center>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Clear" /><br /><br />
+      </center>
+    </form>
+  </body>
+</html>

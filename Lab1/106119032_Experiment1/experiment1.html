@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+
+    <body>
+        <h1 id="h1_1">Enter the details</h1>
+        <table id="table1">
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" placeholder="Enter Name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" placeholder="Enter Username" id="username"></td>
+            </tr>
+            <tr>
+                <td>Email ID: </td>
+                <td><input type="text" placeholder="Enter Email ID" id="email"></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" placeholder="Enter Password" id="password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password: </td>
+                <td><input type="password" placeholder="Re-enter Password" id="cpassword"></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="button1" onclick="cleardata()">clear</button></td>
+                <td><button type="button" id="button2" onclick="createaccount()">create account</button></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        function cleardata(){
+            document.getElementById("name").value="";
+            document.getElementById("username").value="";
+            document.getElementById("email").value="";
+            document.getElementById("password").value="";
+            document.getElementById("cpassword").value="";
+        }
+        function createaccount(){
+            var namere=/^[A-Za-z\s]+$/;
+            var name=document.getElementById("name").value;
+            if(name=="") {
+                alert("Enter your name");
+                return;
+            }
+            if(!namere.test(name)) {
+                alert("Name should contain only letters");
+                return;
+            }
+            var usernamere=/^[A-Za-z0-9]+$/;
+            var username=document.getElementById("username").value;
+            if(username=="") {
+                alert("Enter a username");
+                return;
+            }
+            if(!usernamere.test(username)) {
+                alert("Username should contain only letters and numbers");
+                return;
+            }
+            var emailre=/^[A-Za-z0-9]+[@][A-Za-z0-9]+[.][A-Za-z]+$/;
+            var email=document.getElementById("email").value;
+            if(email=="") {
+                alert("Enter a email");
+                return;
+            }
+            if(!emailre.test(email)) {
+                alert("invalid email id");
+                return;
+            }
+            var password=document.getElementById("password").value;
+            var cpassword=document.getElementById("cpassword").value;
+            if(password=="") {
+                alert("enter a password");
+                return;
+            }
+            if(password.length<8) {
+                alert("password lenght has to greater than or equal to 8");
+                return;
+            }
+            if(password!=cpassword) {
+                alert("passwords don't match");
+                return;
+            }
+            alert("success account created");
+            cleardata();
+        }
+    </script>
+    <style>
+        #h1_1 {
+            background-color: cadetblue;
+            text-align: center;
+        }
+
+        body {
+            background-color: rgba(3, 20, 26, 0.096);
+        }
+        #table1 {
+            text-align: right;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: larger;
+            background-color: rgba(166, 177, 214, 0.226);
+        }
+        #button1 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid red;
+            border-radius: 4px;
+            font-size: larger;
+        }
+        #button1:hover {
+            background-color: red;
+        }
+        #button2 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid green;
+            border-radius: 4px;
+            font-size: larger;
+        }
+        #button2:hover {
+            background-color: green;
+        }
+    </style>
+</html> 
